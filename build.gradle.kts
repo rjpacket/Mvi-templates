@@ -54,6 +54,10 @@ qodana {
     showReport.set(System.getenv("QODANA_SHOW_REPORT")?.toBoolean() ?: false)
 }
 
+dependencies{
+    compileOnly(files("lib/wizard-template.jar"))
+}
+
 tasks {
     wrapper {
         gradleVersion = properties("gradleVersion")
